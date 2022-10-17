@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\tesController;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\TutorialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test/{id}',[tesController::class,'view']);
+Route::get('/hello', [TestController::class, 'test']);
+
+
