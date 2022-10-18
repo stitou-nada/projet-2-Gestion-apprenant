@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\TutorialController;
 
 /*
@@ -19,6 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', [TestController::class, 'test']);
+Route::get('/index', [PromotionController::class, 'Afficher']);
 
 
