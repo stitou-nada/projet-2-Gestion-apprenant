@@ -1,5 +1,6 @@
 <html>
     <body>
+        <a href="create">Ajouter une promotion</a>
         <table>
             <thead>
                 <tr>

@@ -11,4 +11,20 @@ class PromotionController extends Controller
         $table = promotion::all();
         return view("index",compact("table"));
     }
+    
+    public function Create(){
+      return view('create');
+     
+    }
+
+    public function AjouterPromotion(Request $request){
+        $promotion = new promotion();
+        $promotion->name_promotion =$request->input("name");
+        $promotion->save(); 
+        if($promotion->save()){
+            return redirect('index');
+        }
+    }
+
+    
 }
