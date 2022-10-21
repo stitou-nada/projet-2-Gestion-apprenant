@@ -25,5 +25,5 @@ Route::post('/ajouter',[PromotionController::class,'Ajouter']);
 Route::get('/edit/{id}',[PromotionController::class,'Edit']);
 Route::Post('/modifier/{id}',[PromotionController::class,'Modifier']);
 Route::get('/supprimer/{id}',[PromotionController::class,'Supprimer']);
-Route::get('/recherche',[PromotionController::class,'recherche']);
+Route::get('search',[PromotionController::class,'search']);
 

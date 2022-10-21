@@ -46,4 +46,27 @@ class PromotionController extends Controller
         ->delete();
         return redirect("index");
     }
+
+    public function search(Request $request){
+        if($request->ajax()){
+            $input = $request->key;
+        $output="";
+        $Promotion= PromotionModel::where('name_promotion','like','%'.$input."%")
+        ->get();
+        if($Promotion)
+        {
+        foreach ($Promotion as $value) {
+        $output.='<tr>
+        <td>'.$value->id.'</td>
+        <td>'.$value->name_promotion.'</td>
+        <td>
+        <a href="edit/.$value->">Modifier</a>
+         <a href="supprimer/{{$value->id}}">Supprimer</a>
+        <td>
+        </tr>';
+    }
+      return Response($output);
+      }
+     }
+    }
 }
