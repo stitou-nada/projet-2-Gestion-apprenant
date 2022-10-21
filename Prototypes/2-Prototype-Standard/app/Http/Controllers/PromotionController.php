@@ -31,4 +31,18 @@ class PromotionController extends Controller
     ->get();
     return view('edit',compact('promotion'));
    }
+
+   public function Modifier(request $request ,$id){
+    $promotion = PromotionModel::where('id',$id)
+    ->update([
+          'name_promotion'=>$request->name
+    ]);
+     return redirect('table');
+   }
+
+   public function Supprimer($id){
+    $promotion= PromotionModel::where('id',$id)
+    ->delete();
+    return redirect('table');
+   }
 }

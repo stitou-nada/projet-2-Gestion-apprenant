@@ -16,7 +16,7 @@
                 <td>{{$value->name_promotion}}</td>
                 <td>
                     <a href="edit/{{$value->id}}">Modifier</a>
-                    <a href="supprimer">Supprimer</a>
+                    <a href="supprimer/{{$value->id}}">Supprimer</a>
                 </td>
             </tr>
             @endforeach

@@ -22,4 +22,6 @@ Route::get('/table',[PromotionController::class,'Afficher']);
 Route::get('/create',[PromotionController::class,'Create']);
 Route::post('/ajouter',[PromotionController::class,'Ajouter']);
 Route::get('/edit/{id}',[PromotionController::class,'Edit']);
+Route::post('/modifier/{id}',[PromotionController::class,'Modifier']);
+Route::get('/supprimer/{id}',[PromotionController::class,'Supprimer']);
 
