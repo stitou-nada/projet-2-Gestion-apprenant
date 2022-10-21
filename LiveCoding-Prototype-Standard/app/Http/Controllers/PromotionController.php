@@ -43,11 +43,9 @@ class PromotionController extends Controller
      return redirect('index');
 
     }
-
-    public function Supprimer($id){
+      public function Delete($id){
         $promotion = promotion::where('id',$id)
         ->delete();
         return redirect('index');
-
 }
 }
