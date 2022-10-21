@@ -20,4 +20,6 @@ Route::get('/', function () {
 
 Route::get('/table',[PromotionController::class,'Afficher']);
 Route::get('/create',[PromotionController::class,'Create']);
-Route::post('/ajouter',[PromotionController::class,'Modifier']);
+Route::post('/ajouter',[PromotionController::class,'Ajouter']);
+Route::get('/edit/{id}',[PromotionController::class,'Edit']);
+

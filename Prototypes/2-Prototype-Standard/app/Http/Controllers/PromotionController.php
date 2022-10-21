@@ -17,12 +17,18 @@ class PromotionController extends Controller
     return view('create');
    }
 
-   public function Modifier(request $request){
+   public function Ajouter(request $request){
     $promotion = new PromotionModel();
     $promotion->name_promotion =$request->input('name');
     $promotion->save();
     if ($promotion->save()) {
         return redirect('table');
     }
+   }
+
+   public function Edit($id){
+    $promotion = PromotionModel::where('id',$id)
+    ->get();
+    return view('edit',compact('promotion'));
    }
 }
