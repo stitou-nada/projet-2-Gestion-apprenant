@@ -19,10 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('ajouter',[PromotionController::class,"AjouterPromotion"]);
 Route::get('/index', [PromotionController::class, 'Afficher']);
-
 Route::get('/create', [PromotionController::class, 'Create']);
+Route::post('ajouter',[PromotionController::class,"AjouterPromotion"]);
+
 
 
 

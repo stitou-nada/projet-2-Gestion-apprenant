@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PromotionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/table',[PromotionController::class,'Afficher']);
+Route::get('/create',[PromotionController::class,'Create']);
+Route::post('/ajouter',[PromotionController::class,'Modifier']);
