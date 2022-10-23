@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class ampprenantModel extends Model
 {
-    use HasFactory;
+    public $timestamps = false;
+    protected $table='ampprenant';
+    protected $fillable =[
+        'Name_ampprenant',
+        'Prenom_ampprenant',
+        'Email_ampprenant',
+        'name_promotion',
+    ];
 }
