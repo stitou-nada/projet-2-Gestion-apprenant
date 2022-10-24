@@ -47,4 +47,50 @@ class ampprenantController extends Controller
         ->delete();
         return back();
     }
+
+    public function searchAp(Request $request){
+        if($request->ajax()){
+            $input = $request->key;
+            $id = $request->id;
+        $output="";
+        $Promotion= ampprenantModel::
+            where([
+        ["PromotionID", '=', $id],
+        ['id', '=', $input],
+    ])
+->orWhere([
+    ["PromotionID", '=', $id],
+    ['Name_ampprenant','like',$input."%"]
+    ])
+->orWhere([
+    ["PromotionID", '=', $id],
+    ['Prenom_ampprenant','like',$input."%"]
+    ])
+->orWhere([
+    ["PromotionID", '=', $id],
+    ['Email_ampprenant','like',$input."%"]
+    ])
+
+        ->join('promotion','ampprenant.PromotionID','promotion.id_promotion')
+        ->get();
+        if($Promotion)
+        {
+            foreach ($Promotion as $value) {
+            $urlEdit = (url('edit/'.$value->id_promotion));
+            $urlDelete = (url('suprimer/'.$value->id_promotion));
+        $output.='<tr>
+        <td>'.$value->id.'</td>
+        <td>'.$value->Name_ampprenant.'</td>
+        <td>'.$value->Prenom_ampprenant.'</td>
+        <td>'.$value->Email_ampprenant.'</td>
+        <td>
+        <a href="'.$urlEdit.'">Modifier</a>
+         <a href="'.$urlDelete.'">Supprimer</a>
+        <td>
+        </tr>';
+    }
+      return Response($output);
+      }
+    }
+}
 }

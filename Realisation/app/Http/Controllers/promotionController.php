@@ -33,7 +33,7 @@ class promotionController extends Controller
 
         $promotion=promotionModel::where('id_promotion',$id)
         ->get();
-        return view('promotion.edit', compact('promotion','ampprenant'));
+        return view('promotion.edit', compact('promotion','ampprenant','id'));
     }
 
 
