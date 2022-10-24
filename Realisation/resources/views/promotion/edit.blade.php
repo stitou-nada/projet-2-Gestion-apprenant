@@ -1,5 +1,5 @@
-<input type="text" id="search">
 <input type="text" hidden value="{{$id}}" id="IdKey">
+<input type="text" id="search">
 
 @foreach ($promotion as $value)
 

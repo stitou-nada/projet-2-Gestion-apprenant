@@ -57,8 +57,8 @@ class ampprenantController extends Controller
             where([
         ["PromotionID", '=', $id],
         ['id', '=', $input],
-    ])
-->orWhere([
+             ])
+      ->orWhere([
     ["PromotionID", '=', $id],
     ['Name_ampprenant','like',$input."%"]
     ])
