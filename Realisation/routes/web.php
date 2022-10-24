@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ampprenantController;
+use App\Http\Controllers\apprenantController;
 use App\Http\Controllers\promotionController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/edit', function () {
+    return view('editt');
+});
+Route::get('/creatt', function () {
+    return view('create');
+});
+
 // route promotion
 Route::get('/index',[promotionController::class,'Afficher']);
 Route::get('/create',[promotionController::class,'Create']);
@@ -27,13 +34,13 @@ Route::post('/modifier/{id}',[promotionController::class,'Modifier']);
 Route::get('/suprimer/{id}',[promotionController::class,'Supprimer']);
 
 Route::get('search',[promotionController::class,'search']);
-Route::get('searchAp',[ampprenantController::class,'searchAp']);
+Route::get('searchAp',[apprenantController::class,'searchAp']);
 
 
 
 //route ampprenant
-Route::get('/Create/{id}',[ampprenantController::class,'Create']);
-Route::post('/Ajouter',[ampprenantController::class,'Ajouter']);
-Route::get('/Edit/{id}',[ampprenantController::class,'Edit']);
-Route::post('/Modifier/{id}',[ampprenantController::class,'Modifier']);
-Route::get('/Suprimer/{id}',[ampprenantController::class,'Supprimer']);
+Route::get('/Create/{id}',[apprenantController::class,'Create']);
+Route::post('/Ajouter',[apprenantController::class,'Ajouter']);
+Route::get('/Edit/{id}',[apprenantController::class,'Edit']);
+Route::post('/Modifier/{id}',[apprenantController::class,'Modifier']);
+Route::get('/Suprimer/{id}',[apprenantController::class,'Supprimer']);

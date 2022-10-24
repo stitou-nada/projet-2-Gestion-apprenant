@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('Name_promotion')->nullable();
 
         });
-        Schema::create('ampprenant', function (Blueprint $table) {
+        Schema::create('apprenant', function (Blueprint $table) {
             $table->Id();
-            $table->string('Name_ampprenant')->nullable();
-            $table->string('Prenom_ampprenant')->nullable();
-            $table->string('Email_ampprenant')->nullable();
+            $table->string('Name_apprenant')->nullable();
+            $table->string('Prenom_apprenant')->nullable();
+            $table->string('Email_apprenant')->nullable();
             $table->unsignedInteger('PromotionID')->nullable();
             $table->foreign('PromotionID')
             ->references('id_promotion')

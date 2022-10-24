@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\promotionModel;
-use App\Models\ampprenantModel;
+use App\Models\apprenantModel;
 use Illuminate\Http\Request;
 
 class promotionController extends Controller
@@ -27,13 +27,13 @@ class promotionController extends Controller
     }
 
     public function Edit($id){
-        $ampprenant = ampprenantModel::where('PromotionID',$id)
-        ->join('promotion','ampprenant.PromotionID','promotion.id_promotion')
+        $apprenant = apprenantModel::where('PromotionID',$id)
+        ->join('promotion','apprenant.PromotionID','promotion.id_promotion')
         ->get();
 
         $promotion=promotionModel::where('id_promotion',$id)
         ->get();
-        return view('promotion.edit', compact('promotion','ampprenant','id'));
+        return view('promotion.edit', compact('promotion','apprenant','id'));
     }
 
 

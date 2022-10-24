@@ -22,14 +22,14 @@
         </tr>
     </thead>
     <tbody id="tbody">
-        @foreach ($ampprenant as $value)
+        @foreach ($apprenant as $value)
 
 
         <tr>
             <td>{{$value->id}}</td>
-            <td>{{$value->Name_ampprenant}}</td>
-            <td>{{$value->Prenom_ampprenant}}</td>
-            <td>{{$value->Email_ampprenant}}</td>
+            <td>{{$value->Name_apprenant}}</td>
+            <td>{{$value->Prenom_apprenant}}</td>
+            <td>{{$value->Email_apprenant}}</td>
             <td>
                 <a href="{{url('Edit')}}/{{$value->id}}">Modifier</a>
                 <a href="{{url('Suprimer')}}/{{$value->id}}">Supprimer</a>
