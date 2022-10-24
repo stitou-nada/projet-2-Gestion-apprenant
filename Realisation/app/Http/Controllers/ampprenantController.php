@@ -12,36 +12,36 @@ class ampprenantController extends Controller
         return view('ampprenant.table',compact('ampprenant'));
     }
 
-    public function Createe(){
+    public function Create(){
         return view('ampprenant.Create');
     }
-    
-    public function Ajouterr(request $request){
+
+    public function Ajouter(request $request){
             ampprenantModel::create([
             'Name_ampprenant'=>$request->name,
             'Prenom_ampprenant'=>$request->prenom,
             'Email_ampprenant'=>$request->email,
-            'name_promotion'=>$request->name_promotion,
+            'PromotionID'=>$request->PromotionID,
         ]);
         return redirect('table');
     }
-    public function Editt($id){
+    public function Edit($id){
         $ampprenant=ampprenantModel::where('id',$id)
         ->get();
         return view('ampprenant.Edit', compact('ampprenant'));
     }
-    public function Modifierr(request $request , $id){
+    public function Modifier(request $request , $id){
         ampprenantModel::where('id',$id)
         ->update([
             'Name_ampprenant'=>$request->name,
-            'Prenom_ampprenant'=>$request->name,
-            'Email_ampprenant'=>$request->name,
-            'name_promotion'=>$request->name,
+            'Prenom_ampprenant'=>$request->prenom,
+            'Email_ampprenant'=>$request->email,
+            'PromotionID'=>$request->PromotionID,
         ]);
         return redirect('table');
     }
-    
-    public function Supprimerr($id){
+
+    public function Supprimer($id){
         ampprenantModel::where('id',$id)
         ->delete();
         return redirect('table');

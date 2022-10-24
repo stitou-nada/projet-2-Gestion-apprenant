@@ -15,7 +15,7 @@ class promotionController extends Controller
     public function Create(){
         return view('promotion.create');
     }
-    
+
     public function Ajouter(request $request){
             promotionModel::create([
             'Name_promotion'=>$request->name
@@ -23,20 +23,20 @@ class promotionController extends Controller
         return redirect('index');
     }
     public function Edit($id){
-        $promotion=promotionModel::where('id',$id)
+        $promotion=promotionModel::where('id_promotion',$id)
         ->get();
         return view('promotion.edit', compact('promotion'));
     }
     public function Modifier(request $request , $id){
-        promotionModel::where('id',$id)
+        promotionModel::where('id_promotion',$id)
         ->update([
             'Name_promotion'=>$request->name
         ]);
         return redirect('index');
     }
-    
+
     public function Supprimer($id){
-        promotionModel::where('id',$id)
+        promotionModel::where('id_promotion',$id)
         ->delete();
         return redirect('index');
     }

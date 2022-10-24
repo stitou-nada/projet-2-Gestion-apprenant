@@ -14,17 +14,21 @@ return new class extends Migration
     public function up()
     {
         Schema::create('promotion', function (Blueprint $table) {
-            $table->Id();
-            $table->string('Name_promotion');
-         
+            $table->increments('id_promotion');
+            $table->string('Name_promotion')->nullable();
+
         });
         Schema::create('ampprenant', function (Blueprint $table) {
             $table->Id();
-            $table->string('Name_ampprenant');
-            $table->string('Prenom_ampprenant');
-            $table->string('Email_ampprenant');
-            $table->string('name_promotion');
-         
+            $table->string('Name_ampprenant')->nullable();
+            $table->string('Prenom_ampprenant')->nullable();
+            $table->string('Email_ampprenant')->nullable();
+            $table->unsignedInteger('PromotionID')->nullable();
+            $table->foreign('PromotionID')
+            ->references('id_promotion')
+            ->on('promotion')
+            ->onDelete('cascade');
+
         });
     }
 

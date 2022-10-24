@@ -9,14 +9,14 @@
     </thead>
     <tbody>
         @foreach ($promotion as $value)
-            
-    
+
+
         <tr>
-            <td>{{$value->id}}</td>
+            <td>{{$value->id_promotion}}</td>
             <td>{{$value->Name_promotion}}</td>
             <td>
-                <a href="edit/{{$value->id}}">Modifier</a> 
-                <a href="suprimer/{{$value->id}}">Supprimer</a> 
+                <a href="edit/{{$value->id_promotion}}">Modifier</a>
+                <a href="suprimer/{{$value->id_promotion}}">Supprimer</a>
             </td>
         </tr>
         @endforeach

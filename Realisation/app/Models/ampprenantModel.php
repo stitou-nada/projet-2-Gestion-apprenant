@@ -13,6 +13,6 @@ class ampprenantModel extends Model
         'Name_ampprenant',
         'Prenom_ampprenant',
         'Email_ampprenant',
-        'name_promotion',
+        'PromotionID',
     ];
 }

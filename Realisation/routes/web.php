@@ -29,8 +29,8 @@ Route::get('/suprimer/{id}',[promotionController::class,'Supprimer']);
 
 //route ampprenant
 Route::get('/table',[ampprenantController::class,'Afficher']);
-Route::get('/Create',[ampprenantController::class,'Createe']);
-Route::post('/Ajouter',[ampprenantController::class,'Ajouterr']);
-Route::get('/Edit/{id}',[ampprenantController::class,'Editt']);
-Route::post('/Modifier/{id}',[ampprenantController::class,'Modifierr']);
-Route::get('/Suprimer/{id}',[ampprenantController::class,'Supprimerr']);
+Route::get('/Create',[ampprenantController::class,'Create']);
+Route::post('/Ajouter',[ampprenantController::class,'Ajouter']);
+Route::get('/Edit/{id}',[ampprenantController::class,'Edit']);
+Route::post('/Modifier/{id}',[ampprenantController::class,'Modifier']);
+Route::get('/Suprimer/{id}',[ampprenantController::class,'Supprimer']);
