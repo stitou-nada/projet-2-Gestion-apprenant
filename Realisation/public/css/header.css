@@ -1,0 +1,54 @@
+.navbar{
+    position: fixed;
+    width:100%;
+    transition: background-color 1s;
+
+  }
+
+  .logo{
+    width: 159px;
+    margin: 42px;
+
+  }
+  .header{
+    background-color: #593196;
+    height: 260px;
+  }
+  .devHeader{
+    background-color: #593196;
+    height: 61px;
+    margin-top: 19px;
+  }
+  .header-box{
+    margin-right: 33px;
+    display: flex;
+
+    align-items: center;
+
+  }
+  .title-header{
+   margin-left: 310px;
+    color: silver;
+    font-size: 62px;
+  }
+
+  .devHeaderText{
+    color: silver;
+    padding-left: 22px;
+    padding-top: 20px;
+    border-left-width: 20px;
+    font-size: 19px;
+
+
+  }
+
+  .rect{
+    width:100%;
+    height:100vh;
+  }
+  #green{
+    background-color:#559065;
+  }
+  #blue{
+    background-color:#7eb3a7;
+  }
