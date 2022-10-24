@@ -26,6 +26,9 @@ Route::get('/edit/{id}',[promotionController::class,'Edit']);
 Route::post('/modifier/{id}',[promotionController::class,'Modifier']);
 Route::get('/suprimer/{id}',[promotionController::class,'Supprimer']);
 
+Route::get('search',[promotionController::class,'search']);
+
+
 
 //route ampprenant
 Route::get('/Create/{id}',[ampprenantController::class,'Create']);

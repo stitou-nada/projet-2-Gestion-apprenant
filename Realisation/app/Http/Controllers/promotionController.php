@@ -42,7 +42,7 @@ class promotionController extends Controller
         ->update([
             'Name_promotion'=>$request->name
         ]);
-        return redirect('index');
+        return redirect(url('edit/'.$id));
     }
 
     public function Supprimer($id){
@@ -50,4 +50,29 @@ class promotionController extends Controller
         ->delete();
         return redirect('index');
     }
+
+    public function search(Request $request){
+        if($request->ajax()){
+            $input = $request->key;
+        $output="";
+        $Promotion= promotionModel::where('Name_promotion','like',$input."%")
+        ->get();
+        if($Promotion)
+        {
+            foreach ($Promotion as $value) {
+            $urlEdit = (url('edit/'.$value->id_promotion));
+            $urlDelete = (url('suprimer/'.$value->id_promotion));
+        $output.='<tr>
+        <td>'.$value->id_promotion.'</td>
+        <td>'.$value->Name_promotion.'</td>
+        <td>
+        <a href="'.$urlEdit.'">Modifier</a>
+         <a href="'.$urlDelete.'">Supprimer</a>
+        <td>
+        </tr>';
+    }
+      return Response($output);
+      }
+    }
+}
 }

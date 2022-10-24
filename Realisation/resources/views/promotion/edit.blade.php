@@ -36,4 +36,5 @@
         @endforeach
     </tbody>
 </table>
+<a href="{{url('index')}}">Retour</a>
 
