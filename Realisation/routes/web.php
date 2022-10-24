@@ -28,8 +28,7 @@ Route::get('/suprimer/{id}',[promotionController::class,'Supprimer']);
 
 
 //route ampprenant
-Route::get('/table',[ampprenantController::class,'Afficher']);
-Route::get('/Create',[ampprenantController::class,'Create']);
+Route::get('/Create/{id}',[ampprenantController::class,'Create']);
 Route::post('/Ajouter',[ampprenantController::class,'Ajouter']);
 Route::get('/Edit/{id}',[ampprenantController::class,'Edit']);
 Route::post('/Modifier/{id}',[ampprenantController::class,'Modifier']);
