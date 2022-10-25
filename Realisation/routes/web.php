@@ -15,15 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/edit', function () {
-    return view('editt');
-});
-Route::get('/creatt', function () {
-    return view('create');
-});
+
 
 // route promotion
 Route::get('/index',[promotionController::class,'Afficher']);
