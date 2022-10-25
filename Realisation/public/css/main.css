@@ -14,4 +14,44 @@
     margin-top: 98px !important;
 }
 
+.tableEdit{
+    margin-left: 385px !important;
+    width: 1224px !important;
+    margin-top: -216px !important;
+}
+.tableRes{
+margin-top: -600px !important;
+}
 
+.searchInput{
+    border-style: solid !important;
+    border-width: 1px !important;
+    color: #6632b1 !important;
+    width: 300px !important;
+
+
+}
+.searchEdit{
+    border-style: solid !important;
+    border-width: 1px !important;
+    color: #6632b1 !important;
+    width: 300px !important;
+
+
+}
+.searchEdit::placeholder{
+    color: #6632b1 !important;
+
+    padding-left: 10px !important;
+}
+.Input::placeholder{
+    padding-left: 10px !important;
+}
+.title{
+    color: white !important;
+}
+.inputHidden{
+    border-style: solid !important;
+    border-width: 1px !important;
+    color: white !important;
+}

@@ -79,14 +79,16 @@ class apprenantController extends Controller
             $urlEdit = (url('edit/'.$value->id_promotion));
             $urlDelete = (url('suprimer/'.$value->id_promotion));
         $output.='<tr>
+        <td></td>
         <td>'.$value->id.'</td>
         <td>'.$value->Name_apprenant.'</td>
         <td>'.$value->Prenom_apprenant.'</td>
         <td>'.$value->Email_apprenant.'</td>
         <td>
-        <a href="'.$urlEdit.'">Modifier</a>
-         <a href="'.$urlDelete.'">Supprimer</a>
-        <td>
+        <a href="'.$urlEdit.'class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+        <a href="'.$urlDelete.'class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+       <td>
+
         </tr>';
     }
       return Response($output);

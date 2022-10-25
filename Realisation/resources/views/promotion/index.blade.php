@@ -30,7 +30,7 @@
                                 </div>
                     </div>
                     <div class="col-sm-6">
-                        <a href="create" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Ajouter Promotion</span></a>
+                        <a href="{{asset('create')}}" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Ajouter Promotion</span></a>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-
+                       <th></th>
                         <th>Id</th>
                         <th>Name promotion</th>
 
@@ -48,13 +48,13 @@
                 <tbody id="tbody">
                     @foreach ($promotion as $value)
                     <tr>
-
+                         <td></td>
                         <td>{{$value->id_promotion}}</td>
                         <td>{{$value->Name_promotion}}</td>
 
                         <td>
-                            <a href="edit/{{$value->id_promotion}}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="suprimer/{{$value->id_promotion}}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a href="edit/{{$value->id_promotion}}" class="edit" ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="suprimer/{{$value->id_promotion}}" class="delete" ><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
                     @endforeach
@@ -69,3 +69,5 @@
 </body>
 </html>
 
+
+<script src="{{asset("js/search.js")}}"></script>

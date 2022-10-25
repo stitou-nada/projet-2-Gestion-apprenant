@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::get('/edit', function () {
+    return view('editt');
+});
+
 
 // route promotion
 Route::get('/index',[promotionController::class,'Afficher']);

@@ -251,6 +251,32 @@ input#search {
 .dax{
 	margin-top: 12px;
 }
+.in{
+    text-align: center !important;
+    color: white !important;
+    font-size: large !important;
+}
+.cadre{
+    border-style: solid !important;
+    border-width: 1px !important;
+    color: #6632b1 !important;
+    width: 300px !important;
+}
+.cadree{
+    border-style: solid !important;
+    border-width: 1px !important;
+    color: #6632b1 !important;
+    width: 500px !important;
+}
+.cadre::placeholder{
+    padding-left: 10px !important;
+}
+.cadree::placeholder{
+    padding-left: 10px !important;
+}
+.name{
+     font-size: 20px !important;
+}
 
 
 
