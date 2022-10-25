@@ -1,0 +1,17 @@
+
+
+.container-xl{
+    max-width: 1700px !important;
+    display: flex;
+    margin-left: 0px !important;
+    align-items: center;
+}
+
+.navbar-vertical.navbar-expand-xs {
+
+    background-image: linear-gradient(195deg, #6632b1 0%, #191919 100%) !important;
+
+    margin-top: 98px !important;
+}
+
+
