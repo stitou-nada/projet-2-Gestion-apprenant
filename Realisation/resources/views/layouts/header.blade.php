@@ -3,5 +3,5 @@
     <h1 class="title-header">Gestion d'amprenant</h1>
 </div>
 <div class="devHeader">
-        <p class="devHeaderText">Hello/index/</p>
+        <p class="devHeaderText"></p>
 </div>

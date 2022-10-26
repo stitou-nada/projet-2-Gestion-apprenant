@@ -63,13 +63,14 @@ class promotionController extends Controller
             $urlEdit = (url('edit/'.$value->id_promotion));
             $urlDelete = (url('suprimer/'.$value->id_promotion));
         $output.='<tr>
-        <td> </td>
+
         <td>'.$value->id_promotion.'</td>
         <td>'.$value->Name_promotion.'</td>
+
         <td>
 
-        <a href="'.$urlEdit.'class="edit" ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-         <a href="'.$urlDelete.'class="delete" ><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+        <a href='.$urlEdit.' class="edit" ><i class="material-icons"  title="Edit">&#xE254;</i></a>
+         <a href='.$urlDelete.' class="delete" ><i class="material-icons"  title="Delete">&#xE872;</i></a>
         <td>
         </tr>';
 

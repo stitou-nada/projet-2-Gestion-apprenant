@@ -31,6 +31,9 @@ margin-top: -600px !important;
 
 
 }
+.searchInput::placeholder{
+    padding-left: 10px !important;
+}
 .searchEdit{
     border-style: solid !important;
     border-width: 1px !important;

@@ -85,8 +85,8 @@ class apprenantController extends Controller
         <td>'.$value->Prenom_apprenant.'</td>
         <td>'.$value->Email_apprenant.'</td>
         <td>
-        <a href="'.$urlEdit.'class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-        <a href="'.$urlDelete.'class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+        <a href=".$urlEdit" class="edit" ><i class="material-icons"  title="Edit">&#xE254;</i></a>
+        <a href=".$urlDelete" class="delete" ><i class="material-icons"  title="Delete">&#xE872;</i></a>
        <td>
 
         </tr>';

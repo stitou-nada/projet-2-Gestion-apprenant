@@ -89,8 +89,8 @@
                         <td>{{$value->Prenom_apprenant}}</td>
                         <td>{{$value->Email_apprenant}}</td>
 						<td>
-							<a href="{{url('Edit')}}/{{$value->id}}" class="edit" ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-							<a href="{{url('Suprimer')}}/{{$value->id}}" class="delete" ><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+							<a href="{{url('Edit')}}/{{$value->id}}" class="edit" ><i class="material-icons"  title="Edit">&#xE254;</i></a>
+							<a href="{{url('Suprimer')}}/{{$value->id}}" class="delete" ><i class="material-icons"  title="Delete">&#xE872;</i></a>
 						</td>
 					</tr>
                     @endforeach
