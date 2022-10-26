@@ -15,7 +15,7 @@
   }
   .header{
     background-color: #593196;
-    height: 260px;
+    height: 233px;
   }
   .devHeader{
     background-color: #593196;
@@ -35,15 +35,7 @@
     font-size: 62px;
   }
 
-  .devHeaderText{
-    color: silver;
-    padding-left: 22px;
-    padding-top: 20px;
-    border-left-width: 20px;
-    font-size: 19px;
 
-
-  }
 
   .rect{
     width:100%;
