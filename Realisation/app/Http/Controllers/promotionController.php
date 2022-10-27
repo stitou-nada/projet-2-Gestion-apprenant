@@ -27,13 +27,12 @@ class promotionController extends Controller
     }
 
     public function Edit($id){
+        $promotion=promotionModel::where('id_promotion',$id)
+        ->get();
         $apprenant = apprenantModel::where('PromotionID',$id)
         ->join('promotion','apprenant.PromotionID','promotion.id_promotion')
         ->get();
-
-        $promotion=promotionModel::where('id_promotion',$id)
-        ->get();
-        return view('promotion.edit', compact('promotion','apprenant','id'));
+        return view('promotion.edit', compact('promotion','apprenant'));
     }
 
 
@@ -44,6 +43,7 @@ class promotionController extends Controller
         ]);
         return redirect(url('edit/'.$id));
     }
+
 
     public function Supprimer($id){
         promotionModel::where('id_promotion',$id)

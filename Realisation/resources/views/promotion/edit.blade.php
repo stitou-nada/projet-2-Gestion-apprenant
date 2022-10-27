@@ -27,19 +27,11 @@
 			<div class="table-title">
 				<div class="row">
 					<div class="col">
+
                         <div class="search-box">
-                            {{-- <i class="material-icons">&#xE8B6;</i> --}}
-                            <h2 class="text title" onclick="change()"> {{$value->Name_promotion}}</h2>
-                            <input type="hidden" value="{{$id}}" id="IdKey"   class="form-control  searchInput" placeholder="modifier">
+                            <h2 class="text title"  onclick="change()"> {{$value->Name_promotion}}</h2>
                             <input type="hidden"  class="form-control inputHidden Input" value="{{$value->Name_promotion}}" name="name" placeholder="Modifier&hellip;">
                         </div>
-                        {{-- <input type="text"  class="input" name="name" value="{{$item->Name_promotion}}"> --}}
-                        {{-- <div style="display: none" class="search-box">
-                            <input type="text" class="form-control searchInput input" name="name" value="{{$item->Name_promotion}}">
-                        </div> --}}
-
-									{{-- <i class="material-icons">&#xE8B6;</i> --}}
-									{{-- <input type="text" id="serche" class="form-control  searchInput" placeholder="modifier"> --}}
 
 					</div>
 					<div class="col-sm-6">
@@ -54,18 +46,19 @@
           <div class="col-sm-6">
             <a href="{{url('Create')}}/{{$value->id_promotion}}" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Ajouter Apprenant</span></a>
           </div>
-          @endforeach
-					<div class="col">
-								<div class="search-box">
-									{{-- <i class="material-icons">&#xE8B6;</i> --}}
-                                    <input type="text" id="search" class="form-control searchEdit searchInput" placeholder="Search&hellip;">
-								</div>
-					</div>
-				</div>
-			</div>
+          <div class="col">
+              {{-- search  --}}
+              <div class="search-box">
+                  <input type="hidden" value="{{$value->id_promotion}}" id="IdKey"   class="form-control  searchInput" >
+                  <input type="text" id="search" class="form-control searchEdit searchInput" placeholder="Search&hellip;">
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
 
-			<table class="table table-striped table-hover">
-				<thead>
+    <table class="table table-striped table-hover">
+        <thead>
 					<tr>
 						<th>
 
@@ -107,16 +100,13 @@
 
 
 <script>
+    let text = document.querySelector('.title');
     let input = document.querySelector('.inputHidden');
-    let text = document.querySelector('.text');
-    let btn = document.querySelector('.btn_update');
-    let div = document.querySelector('.search-box');
-
 
     function change(){
+        text.style.display = "none"
         input.setAttribute("type", "text");
 
-        text.style.display = "none"
     }
  </script>
 

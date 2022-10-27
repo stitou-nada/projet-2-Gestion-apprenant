@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 
 class apprenantController extends Controller
 {
-    public function Afficher(){
-        $apprenant = apprenantModel::all();
-        return view('apprenant.table',compact('apprenant'));
-    }
 
     public function Create($id){
 
@@ -53,7 +49,7 @@ class apprenantController extends Controller
             $input = $request->key;
             $id = $request->id;
         $output="";
-        $Promotion= apprenantModel::
+        $apprenant= apprenantModel::
             where([
         ["PromotionID", '=', $id],
         ['id', '=', $input],
@@ -73,9 +69,9 @@ class apprenantController extends Controller
 
         ->join('promotion','apprenant.PromotionID','promotion.id_promotion')
         ->get();
-        if($Promotion)
+        if($apprenant)
         {
-            foreach ($Promotion as $value) {
+            foreach ($apprenant as $value) {
             $urlEdit = (url('edit/'.$value->id_promotion));
             $urlDelete = (url('suprimer/'.$value->id_promotion));
         $output.='<tr>
