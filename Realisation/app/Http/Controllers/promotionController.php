@@ -56,6 +56,7 @@ class promotionController extends Controller
             $input = $request->key;
         $output="";
         $Promotion= promotionModel::where('Name_promotion','like',$input."%")
+        ->orWhere('id_promotion','like',$input."%")
         ->get();
         if($Promotion)
         {
